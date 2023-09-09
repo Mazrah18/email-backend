@@ -29,10 +29,15 @@ def generate_emails():
 
     # Prepare inputs for chat model
     system_message = "System: You are a helpful email marketing assistant."
-    user_message = f"User: Subject: {campaign_goal} for {industry}\n\n"
-    user_message += f"Hello,\n\nWe are excited to {campaign_goal.lower()} in the {industry} industry. Our {brand_tone.lower()} tone "
-    user_message += f"aims to {highlights}. Whether you are a {industry} expert or just getting started, our team is here to help. "
+    user_message = "User: Subject: {} for {}\n\n".format(campaign_goal, industry)
+    user_message = "Hello,\n\nWe are excited to {} in the {} industry. Our {} tone "
+    user_message = user_message.format(campaign_goal.lower(), industry, brand_tone.lower())
+
+    user_message += "aims to {}. Whether you are a {} expert or just getting started, our team is here to help."
+    user_message = user_message.format(highlights, industry)
+
     user_message += "Read on to discover more about our latest offerings and how they can benefit you...\n\n"
+
 
     email_templates = []
     for i in range(5):
