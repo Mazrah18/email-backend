@@ -3,8 +3,7 @@ import openai
 from flask_cors import CORS
 
 app = Flask(__name__)
-# CORS(app, resources={r"/generate_emails": {"origins": "https://parth-emailgenerator.netlify.app/"}}) 
-CORS(app, resources={r"/generate_emails": {"origins": "*"}})
+CORS(app, resources={r"/generate_emails": {"origins": "https://parth-emailgenerator.netlify.app"}}) 
 
 
 
