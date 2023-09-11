@@ -9,7 +9,7 @@ CORS(app, resources={r"/generate_emails": {"origins": "*"}})
 
 
 # Set up OpenAI API
-openai.api_key = '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'
+openai.api_key = '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'
 model_id = 'gpt-3.5-turbo'
 
 def generate_email_content(messages):
